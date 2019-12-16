@@ -10,7 +10,8 @@ Trust New Art consists of 3 docker containers:
 The database container builds from an image but uses a Dockerfile to seed initial data so does have a repo. 
 
 Upon starting the mongodb container the seed data will only be entered into the database if there is nothing in the volume. 
-For example, if you have previously built and started the docker container locally and want to make changes, you must remove the volume and container and rebuild.
+For example, if you have previously built and started the docker container locally and want to make changes, you must remove the volume and container and rebuild. 
+You can check there is no volume associated with this project using ```docker volume ls```. If trust-new-art_data-volume appears and you want to repopulate mongo, run ```docker volume rm trust-new-art_data-volume``` to remove it first.
 
 ## Developer
 [Kate Court](www.github.com/katecourt)   
